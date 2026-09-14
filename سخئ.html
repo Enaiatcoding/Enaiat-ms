@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#08050d">
+
+  <title>برای تو از طرف عنایت♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --pink: #ff9dcc;
+      --purple: #b78cff;
+
+      --ease: cubic-bezier(.22, 1, .36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: #08050d;
+    }
+
+    body {
+      min-height: 100svh;
+      overflow: hidden;
+
+      color: white;
+
+      font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+      background:
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(165,95,255,.16),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 85%,
+          rgba(255,87,166,.13),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          #07050c,
+          #11091a 50%,
+          #08050d
+        );
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .intro {
+      position: fixed;
+      inset: 0;
+
+      z-index: 100;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 25px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(190,100,255,.12),
+          transparent 35%
+        ),
+        #08050d;
+
+      transition:
+        opacity .9s ease,
+        visibility .9s ease;
+    }
+
+    .intro.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro-inner {
+      width: 100%;
+      max-width: 400px;
+
+      animation:
+        introIn 1.2s var(--ease);
+    }
+
+    @keyframes introIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .intro-symbol {
+      width: 82px;
+      height: 82px;
+
+      margin: 0 auto 28px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius: 50%;
+
+      color: var(--pink);
+
+      font-size: 38px;
+
+      background:
+        rgba(255,255,255,.035);
+
+      box-shadow:
+        0 0 50px rgba(255,100,180,.12),
+        inset 0 1px rgba(255,255,255,.1);
+
+      animation:
+        symbolPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes symbolPulse {
+      50% {
+        transform: scale(1.05);
+
+        box-shadow:
+          0 0 70px rgba(255,100,180,.2),
+          inset 0 1px rgba(255,255,255,.1);
+      }
+    }
+
+    .intro-label {
+      color: rgba(255,255,255,.38);
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 9px;
+      letter-spacing: 4px;
+
+      margin-bottom: 18px;
+    }
+
+    .intro-title {
+      font-size: clamp(42px, 12vw, 62px);
+
+      font-weight: 500;
+
+      line-height: 1.2;
+
+      margin-bottom: 12px;
+    }
+
+    .intro-title span {
+      color: transparent;
+
+      background:
+        linear-gradient(
+          110deg,
+          #f6b3d7,
+          #ff86bd,
+          #c9a7ff
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .intro-description {
+      max-width: 310px;
+
+      margin: 0 auto 34px;
+
+      color:
+        rgba(255,255,255,.45);
+
+      font-size: 16px;
+
+      line-height: 2;
+    }
+
+    .start {
+      border: 0;
+
+      padding: 15px 38px;
+
+      border-radius: 100px;
+
+      color: white;
+
+      font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+      font-size: 16px;
+
+      background:
+        linear-gradient(
+          110deg,
+          #a962ec,
+          #ed67aa
+        );
+
+      box-shadow:
+        0 15px 40px
+        rgba(190,80,245,.25);
+
+      cursor: pointer;
+
+      transition: .3s ease;
+    }
+
+    .start:active {
+      transform: scale(.95);
+    }
+
+
+    /* =====================================================
+       APP
+    ===================================================== */
+
+    .app {
+      position: relative;
+
+      width: 100%;
+      height: 100svh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        max(15px, env(safe-area-inset-top))
+        15px
+        max(15px, env(safe-area-inset-bottom));
+
+      overflow: hidden;
+    }
+
+    .stars {
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: .35;
+
+      background-image:
+        radial-gradient(
+          circle,
+          white 1px,
+          transparent 1.2px
+        ),
+        radial-gradient(
+          circle,
+          rgba(255,255,255,.5) .7px,
+          transparent 1px
+        );
+
+      background-size:
+        105px 105px,
+        170px 170px;
+
+      animation:
+        starsMove 35s linear infinite;
+    }
+
+    @keyframes starsMove {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-110px);
+      }
+    }
+
+    .orb {
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      border-radius: 50%;
+
+      filter: blur(90px);
+
+      opacity: .14;
+
+      pointer-events: none;
+
+      background: #ad6cff;
+
+      top: -150px;
+      left: -120px;
+    }
+
+    .orb.two {
+      top: auto;
+      left: auto;
+
+      right: -140px;
+      bottom: -130px;
+
+      background: #ff579f;
+    }
+
+
+    /* =====================================================
+       CARD
+    ===================================================== */
+
+    .card {
+      position: relative;
+
+      width: min(100%, 460px);
+
+      /*
+        IMPORTANT:
+        We use max-height instead of a rigid height.
+        This prevents long text from pushing the button
+        outside the screen.
+      */
+
+      height: min(
+        730px,
+        calc(100svh - 30px)
+      );
+
+      max-height: calc(100svh - 30px);
+
+      padding:
+        32px 24px
+        max(22px, env(safe-area-inset-bottom));
+
+      display: flex;
+      flex-direction: column;
+
+      border:
+        1px solid rgba(255,255,255,.115);
+
+      border-radius: 38px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.075),
+          rgba(255,255,255,.025)
+        );
+
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+
+      box-shadow:
+        0 35px 100px rgba(0,0,0,.5),
+        inset 0 1px rgba(255,255,255,.08);
+
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          125deg,
+          rgba(255,255,255,.07),
+          transparent 30%,
+          transparent 70%,
+          rgba(255,255,255,.025)
+        );
+    }
+
+
+    /* =====================================================
+       MUSIC
+    ===================================================== */
+
+    .music {
+      position: fixed;
+
+      z-index: 80;
+
+      top:
+        max(18px, env(safe-area-inset-top));
+
+      right: 18px;
+
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid rgba(255,255,255,.12);
+
+      border-radius: 50%;
+
+      color: rgba(255,255,255,.7);
+
+      background:
+        rgba(255,255,255,.06);
+
+      backdrop-filter: blur(15px);
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: .3s ease;
+    }
+
+    .music.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .music.playing {
+      color: var(--pink);
+
+      box-shadow:
+        0 0 25px
+        rgba(255,100,180,.18);
+    }
+
+    .bars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+
+      direction: ltr;
+    }
+
+    .bars span {
+      width: 2px;
+      height: 5px;
+
+      border-radius: 10px;
+
+      background: currentColor;
+    }
+
+    .playing .bars span:nth-child(1) {
+      animation: music .7s infinite;
+    }
+
+    .playing .bars span:nth-child(2) {
+      animation: music .5s infinite .1s;
+    }
+
+    .playing .bars span:nth-child(3) {
+      animation: music .8s infinite .2s;
+    }
+
+    @keyframes music {
+      50% {
+        height: 15px;
+      }
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .content {
+      position: relative;
+      z-index: 2;
+
+      /*
+        Critical:
+        This is allowed to shrink.
+      */
+
+      min-height: 0;
+
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .label {
+      flex-shrink: 0;
+
+      color: rgba(255,255,255,.38);
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 9px;
+
+      letter-spacing: 3px;
+
+      text-align: center;
+
+      margin-bottom: 14px;
+    }
+
+    .heart {
+      flex-shrink: 0;
+
+      text-align: center;
+
+      font-size: 40px;
+
+      color: #ff9dcc;
+
+      margin-bottom: 8px;
+
+      filter:
+        drop-shadow(
+          0 0 15px
+          rgba(255,100,180,.55)
+        );
+
+      animation:
+        heartbeat 2.5s ease-in-out infinite;
+    }
+
+    @keyframes heartbeat {
+
+      0%,100% {
+        transform: scale(1);
+      }
+
+      12% {
+        transform: scale(1.12);
+      }
+
+      24% {
+        transform: scale(1);
+      }
+
+      36% {
+        transform: scale(1.07);
+      }
+
+    }
+
+    h1 {
+      flex-shrink: 0;
+
+      font-size:
+        clamp(
+          34px,
+          9.5vw,
+          53px
+        );
+
+      font-weight: 500;
+
+      line-height: 1.15;
+
+      text-align: center;
+
+      margin-bottom: 8px;
+    }
+
+    h1 span {
+      color: transparent;
+
+      background:
+        linear-gradient(
+          110deg,
+          #f5b3d8,
+          #ff82bb,
+          #c9a3ff
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+
+    /* =====================================================
+       MESSAGE AREA
+    ===================================================== */
+
+    .message-area {
+
+      /*
+        This is the main bug fix.
+
+        Instead of allowing a huge paragraph
+        to push the button away, the message
+        area takes whatever space is available.
+      */
+
+      flex: 1;
+
+      min-height: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      padding:
+        5px 0 5px;
+    }
+
+    .message-scroll {
+
+      /*
+        Long messages can scroll without
+        affecting the button.
+      */
+
+      width: 100%;
+
+      max-height: 100%;
+
+      overflow-y: auto;
+
+      overscroll-behavior: contain;
+
+      -webkit-overflow-scrolling: touch;
+
+      scrollbar-width: none;
+
+      padding:
+        8px 5px 12px;
+    }
+
+    .message-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .message {
+      max-width: 385px;
+
+      margin: 0 auto;
+
+      color:
+        rgba(255,255,255,.84);
+
+      font-size:
+        clamp(
+          19px,
+          5vw,
+          24px
+        );
+
+      font-weight: 400;
+
+      line-height: 1.95;
+
+      text-align: center;
+
+      overflow-wrap: break-word;
+
+      transition:
+        opacity .3s ease,
+        transform .3s ease;
+    }
+
+    .message.out {
+      opacity: 0;
+
+      transform:
+        translateY(13px);
+    }
+
+    .message.in {
+      animation:
+        messageIn .65s var(--ease);
+    }
+
+    @keyframes messageIn {
+
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+
+    /* =====================================================
+       PROGRESS
+    ===================================================== */
+
+    .progress-wrap {
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 10px;
+
+      direction: ltr;
+
+      color:
+        rgba(255,255,255,.27);
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+
+      padding-top: 7px;
+    }
+
+    .progress {
+      width: 65px;
+      height: 2px;
+
+      overflow: hidden;
+
+      border-radius: 10px;
+
+      background:
+        rgba(255,255,255,.1);
+    }
+
+    .bar {
+      width: 11.11%;
+      height: 100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          #bb7cff,
+          #ff78b8
+        );
+
+      transition:
+        width .6s var(--ease);
+    }
+
+
+    /* =====================================================
+       BOTTOM
+    ===================================================== */
+
+    .bottom {
+      position: relative;
+      z-index: 2;
+
+      flex-shrink: 0;
+
+      padding-top: 10px;
+    }
+
+    .next {
+      display: block;
+
+      width: 100%;
+
+      border: 0;
+
+      padding: 15px 20px;
+
+      min-height: 52px;
+
+      border-radius: 100px;
+
+      color: white;
+
+      font-family:
+        "Noto Naskh Arabic",
+        serif;
+
+      font-size: 16px;
+
+      background:
+        linear-gradient(
+          110deg,
+          #a85df0,
+          #ed67aa
+        );
+
+      box-shadow:
+        0 15px 40px
+        rgba(180,80,240,.25);
+
+      cursor: pointer;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .next:active {
+      transform: scale(.96);
+    }
+
+    .hint {
+      margin-top: 7px;
+
+      color:
+        rgba(255,255,255,.23);
+
+      font-size: 9px;
+
+      text-align: center;
+    }
+
+
+    /* =====================================================
+       PARTICLES
+    ===================================================== */
+
+    .particle {
+      position: fixed;
+
+      z-index: 1;
+
+      bottom: -25px;
+
+      pointer-events: none;
+
+      color: #ff9acb;
+
+      opacity: 0;
+
+      animation:
+        floatUp var(--time)
+        linear forwards;
+    }
+
+    @keyframes floatUp {
+
+      0% {
+        opacity: 0;
+
+        transform:
+          translateY(0)
+          scale(.6);
+      }
+
+      15% {
+        opacity: .65;
+      }
+
+      100% {
+        opacity: 0;
+
+        transform:
+          translate(
+            var(--drift),
+            -115vh
+          )
+          scale(1.4)
+          rotate(30deg);
+      }
+
+    }
+
+
+    /* =====================================================
+       SMALL PHONES
+    ===================================================== */
+
+    @media (max-height: 700px) {
+
+      .card {
+        padding-top: 19px;
+      }
+
+      .label {
+        margin-bottom: 5px;
+      }
+
+      .heart {
+        font-size: 32px;
+        margin-bottom: 4px;
+      }
+
+      h1 {
+        font-size: 34px;
+        margin-bottom: 3px;
+      }
+
+      .message {
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .bottom {
+        padding-top: 7px;
+      }
+
+    }
+
+
+    /* Very small phones */
+
+    @media (max-height: 600px) {
+
+      .card {
+        padding-top: 14px;
+        border-radius: 28px;
+      }
+
+      .label {
+        font-size: 7px;
+      }
+
+      .heart {
+        font-size: 27px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .message {
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .next {
+        min-height: 46px;
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+
+      .hint {
+        display: none;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       INTRO
+  ====================================================== -->
+
+  <div class="intro" id="intro">
+
+    <div class="intro-inner">
+
+      <div class="intro-symbol">
+        ♡
+      </div>
+
+      <div class="intro-label">
+        JUST FOR YOU
+      </div>
+
+      <div class="intro-title">
+        برای <span>تو...</span>
+      </div>
+
+      <div class="intro-description">
+        چیز خاصی نیست...<br>
+        فقط چند حرف که مدت‌ها بود<br>
+        دلم می‌خواست بهت بگویم.
+      </div>
+
+      <button
+        class="start"
+        id="start"
+      >
+        بخوانش ♡
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MUSIC
+  ====================================================== -->
+
+  <button
+    class="music"
+    id="music"
+    aria-label="موسیقی"
+  >
+
+    <div class="bars">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </button>
+
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
+
+  <main class="app">
+
+    <div class="stars"></div>
+
+    <div class="orb"></div>
+    <div class="orb two"></div>
+
+
+    <section class="card">
+
+      <div class="content">
+
+        <div class="label">
+          یک حرف کوچک...
+        </div>
+
+        <div class="heart">
+          ♡
+        </div>
+
+        <h1 id="title">
+          نمی‌دانم چرا،<br>
+          اما یک چیزی<br>
+          <span>در مورد تو هست.</span>
+        </h1>
+
+
+        <div class="message-area">
+
+          <!--
+            IMPORTANT:
+            This wrapper allows long messages
+            to scroll independently.
+          -->
+
+          <div
+            class="message-scroll"
+            id="messageScroll"
+          >
+
+            <p
+              class="message"
+              id="message"
+            >
+              اولش فکر نمی‌کردم چیز خاصی باشد.
+              فقط یک آشنایی ساده بود، یک صحبت معمولی...
+              اما نمی‌دانم از کی چه وقت، حرف زدن با تو برایم فرق کرد.
+            </p>
+
+          </div>
+
+
+          <div class="progress-wrap">
+
+            <span id="counter">
+              01 / 09
+            </span>
+
+            <div class="progress">
+
+              <div
+                class="bar"
+                id="bar"
+              ></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="bottom">
+
+        <button
+          class="next"
+          id="next"
+        >
+          ادامه بده... ♡
+        </button>
+
+        <div class="hint">
+          عجله نکن، هنوز تمام نشده
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* =====================================================
+       STORY
+    ===================================================== */
+
+    const story = [
+
+      {
+        text:
+          "اولش فکر نمی‌کردم چیز خاصی باشد. فقط یک آشنایی ساده بود، یک صحبت معمولی... اما نمی‌دانم از کِی، حرف زدن با تو برایم فرق کرد.",
+
+        button:
+          "ادامه بده... ♡"
+      },
+
+      {
+        text:
+          "بعضی آدم‌ها را می‌بینی و بعد از چند دقیقه فراموش‌شان می‌کنی. اما تو از آن آدم‌ها نبودی. نمی‌دانم دقیقا چی بود، ولی یک چیزی در حرف زدنت بود که در ذهنم ماند.",
+
+        button:
+          "چی بود؟"
+      },
+
+      {
+        text:
+          "شاید طرز خندیدنت بود. شاید طرز حرف زدنت. شاید حتی همان چیزهای کوچکی که خودت فکر می‌کنی کسی متوجه‌شان نمی‌شود. نمی‌دانم... فقط می‌دانم که کم‌کم شروع کردم به دیدن‌شان.",
+
+        button:
+          "بعدش چی شد؟"
+      },
+
+      {
+        text:
+          "بعد دیدم بعضی وقت‌ها بی‌دلیل به چیزهایی که گفته بودی فکر می‌کنم. یک جمله از تو، یک شوخی کوچک، حتی یک گفت‌وگوی کوتاه... گاهی بیشتر از چیزی که باید در ذهنم می‌ماند.",
+
+        button:
+          "جدی؟"
+      },
+
+      {
+        text:
+          "با خودم گفتم شاید فقط یک حس زودگذر باشد. شاید چند روز دیگر از بین برود. اما نرفت. هرچه بیشتر می‌شناختمت، بیشتر دلم می‌خواست بدانم پشت این آدمی که می‌بینم، چه دنیایی وجود دارد.",
+
+        button:
+          "و حالا؟"
+      },
+
+      {
+        text:
+          "حالا گاهی واقعا کنجکاوم بدانم چه چیزهایی خوشحالت می‌کند، چه چیزهایی ناراحتت می‌کند، از چه چیزهایی می‌ترسی، چه چیزهایی برایت مهم است و وقتی هیچ‌کس کنارت نیست، به چه چیزهایی فکر می‌کنی.",
+
+        button:
+          "یک چیز دیگه..."
+      },
+
+      {
+        text:
+          "و عجیب‌ترین قسمت ماجرا این است که من هیچ‌وقت تصمیم نگرفتم به تو فکر کنم. خودش اتفاق افتاد. آرام و بی‌صدا... اول یک فکر کوچک بود، بعد شد یک حس، و بعد دیدم دیگر نمی‌توانم نادیده‌اش بگیرم.",
+
+        button:
+          "ادامه بده ♡"
+      },
+
+      {
+        text:
+          "من نمی‌خواهم این را خیلی بزرگ کنم یا وانمود کنم که جواب همه چیز را می‌دانم. فقط می‌دانم که حضور تو برایم یک حس خوب دارد؛ یک حس آرام و قشنگ که نمی‌شود خیلی راحت با چند کلمه توضیحش داد.",
+
+        button:
+          "آخرش چی می‌خواهی بگویی؟"
+      },
+
+      {
+        text:
+          "شاید فقط می‌خواستم بدانی که یک نفر اینجا هست که بودن و شناختنت برایش جالب شده. کسی که از کشف کردن کم‌کم تو لذت می‌برد و دوست دارد بداند این داستان، اگر قرار باشد ادامه پیدا کند، به کجا می‌رسد.",
+
+        button:
+          "♡"
+      }
+
+    ];
+
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const intro =
+      document.getElementById("intro");
+
+    const start =
+      document.getElementById("start");
+
+    const music =
+      document.getElementById("music");
+
+    const next =
+      document.getElementById("next");
+
+    const message =
+      document.getElementById("message");
+
+    const messageScroll =
+      document.getElementById("messageScroll");
+
+    const counter =
+      document.getElementById("counter");
+
+    const bar =
+      document.getElementById("bar");
+
+    const title =
+      document.getElementById("title");
+
+
+    let current = 0;
+    let finished = false;
+
+    let audio = null;
+    let playing = false;
+
+
+    /* =====================================================
+       START
+    ===================================================== */
+
+    start.addEventListener(
+      "click",
+      async () => {
+
+        intro.classList.add("hide");
+
+        music.classList.add("visible");
+
+        await playMusic();
+
+        burst();
+
+      }
+    );
+
+
+    /* =====================================================
+       MUSIC
+    ===================================================== */
+
+    async function playMusic() {
+
+      if (!audio) {
+
+        audio =
+          new Audio("music.mp3");
+
+        audio.loop = true;
+
+        audio.volume = 0.32;
+
+      }
+
+      try {
+
+        await audio.play();
+
+        playing = true;
+
+        music.classList.add("playing");
+
+      } catch (error) {
+
+        console.log(
+          "Music could not start:",
+          error
+        );
+
+      }
+
+    }
+
+
+    music.addEventListener(
+      "click",
+      async () => {
+
+        if (!audio) {
+
+          await playMusic();
+
+          return;
+
+        }
+
+        if (playing) {
+
+          audio.pause();
+
+          playing = false;
+
+          music.classList.remove(
+            "playing"
+          );
+
+        } else {
+
+          await playMusic();
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       NEXT MESSAGE
+    ===================================================== */
+
+    next.addEventListener(
+      "click",
+      () => {
+
+        if (finished) {
+
+          reset();
+
+          return;
+
+        }
+
+        message.classList.add("out");
+
+        setTimeout(
+          () => {
+
+            current++;
+
+            if (
+              current >=
+              story.length
+            ) {
+
+              finalScreen();
+
+              return;
+
+            }
+
+            message.textContent =
+              story[current].text;
+
+            next.textContent =
+              story[current].button;
+
+            counter.textContent =
+              `${String(current + 1).padStart(2, "0")} / ${String(story.length).padStart(2, "0")}`;
+
+            bar.style.width =
+              `${((current + 1) / story.length) * 100}%`;
+
+            /*
+              IMPORTANT:
+              Always return the text
+              to the top when changing
+              slides.
+            */
+
+            messageScroll.scrollTop = 0;
+
+            message.classList.remove(
+              "out"
+            );
+
+            message.classList.add(
+              "in"
+            );
+
+            burst();
+
+          },
+          300
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       FINAL SCREEN
+    ===================================================== */
+
+    function finalScreen() {
+
+      finished = true;
+
+      title.innerHTML =
+        `شاید همین<br><span>حرفی بود که باید می‌گفتم.</span>`;
+
+      message.textContent =
+        "نمی‌دانم این حرف‌ها برایت چه معنایی دارد. شاید زیاد باشد، شاید هم کم. اما حداقل حالا می‌دانی که یک نفر، خیلی ساده و بی‌سروصدا، از آشنا شدن با تو خوشحال است.";
+
+      next.textContent =
+        "از اول بخوانم ↻";
+
+      counter.textContent =
+        "♡";
+
+      bar.style.width =
+        "100%";
+
+      messageScroll.scrollTop = 0;
+
+      message.classList.remove(
+        "out"
+      );
+
+      message.classList.add(
+        "in"
+      );
+
+      burst();
+
+      setTimeout(
+        burst,
+        300
+      );
+
+      setTimeout(
+        burst,
+        600
+      );
+
+    }
+
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    function reset() {
+
+      current = 0;
+
+      finished = false;
+
+      title.innerHTML =
+        `نمی‌دانم چرا،<br>
+         اما یک چیزی<br>
+         <span>در مورد تو هست.</span>`;
+
+      message.textContent =
+        story[0].text;
+
+      next.textContent =
+        story[0].button;
+
+      counter.textContent =
+        "01 / 09";
+
+      bar.style.width =
+        "11.11%";
+
+      messageScroll.scrollTop = 0;
+
+      message.classList.remove(
+        "out"
+      );
+
+      message.classList.add(
+        "in"
+      );
+
+    }
+
+
+    /* =====================================================
+       PARTICLES
+    ===================================================== */
+
+    const symbols = [
+      "♡",
+      "✦",
+      "✧",
+      "·"
+    ];
+
+
+    function particle() {
+
+      const el =
+        document.createElement("div");
+
+      el.className =
+        "particle";
+
+      el.textContent =
+        symbols[
+          Math.floor(
+            Math.random() *
+            symbols.length
+          )
+        ];
+
+      el.style.left =
+        Math.random() * 100 + "vw";
+
+      el.style.fontSize =
+        (8 + Math.random() * 13)
+        + "px";
+
+      el.style.setProperty(
+        "--time",
+        (6 + Math.random() * 5)
+        + "s"
+      );
+
+      el.style.setProperty(
+        "--drift",
+        (-70 + Math.random() * 140)
+        + "px"
+      );
+
+      document.body.appendChild(el);
+
+      setTimeout(
+        () => el.remove(),
+        13000
+      );
+
+    }
+
+
+    function burst() {
+
+      for (
+        let i = 0;
+        i < 8;
+        i++
+      ) {
+
+        setTimeout(
+          particle,
+          i * 90
+        );
+
+      }
+
+    }
+
+
+    setInterval(
+      particle,
+      1700
+    );
+
+  </script>
+
+</body>
+</html>
